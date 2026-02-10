@@ -1,45 +1,38 @@
-<!DOCTYPE html>
-<html lang="ar">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="UTF-8">
-  <title>Domino Web</title>
-  <style>
-    body {
-      background: #121212;
-      color: white;
-      font-family: Arial;
-      text-align: center;
-    }
-    .tile {
-      display: inline-block;
-      border: 2px solid white;
-      padding: 10px;
-      margin: 5px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
+# Domino Multiplayer Online Game
 
-<h1>🀄 Domino Web</h1>
-<p>اختر بلاطة للعب</p>
+## Project Description
+A comprehensive online multiplayer domino game, which allows users to play with friends and others around the world. The game supports various modes and offers an intuitive interface for all players.
 
-<div id="player"></div>
+## Features
+- Play with friends or random players.
+- Multiple game modes (e.g., Classic, Time Attack).
+- User authentication and profiles.
+- Real-time gameplay with WebSocket.
+- Matchmaking system.
+- Chat functionality.
+- Leaderboard and statistics.
 
-<script>
-  const tiles = ["6|6","6|5","5|5","4|3","2|1"];
-
-  const playerDiv = document.getElementById("player");
-
-  tiles.forEach(t => {
-    const d = document.createElement("div");
-    d.className = "tile";
-    d.innerText = t;
-    d.onclick = () => alert("لعبت البلاطة " + t);
-    playerDiv.appendChild(d);
-  });
-</script>
-
-</body>
-</html>
+## Setup Instructions
+1. Clone the repository
+   ```bash
+   git clone https://github.com/amancharh/Domino.git
+   cd Domino
+   ```
+2. Install backend dependencies
+   ```bash
+   cd backend
+   npm install
+   ```
+3. Start the backend server
+   ```bash
+   node server.js
+   ```
+4. Install frontend dependencies
+   ```bash
+   cd ../frontend
+   npm install
+   ```
+5. Start the frontend application
+   ```bash
+   npm start
+   ```
